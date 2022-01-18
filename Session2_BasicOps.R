@@ -118,6 +118,7 @@ print(x) #or just x
 # seq can be used to create sequences
 x <- seq(0, 1, 0.05)
 x  
+?seq()
 
 # let's work with bigger vectors
 x <- seq(1, 100, 1)
@@ -133,6 +134,9 @@ y <- x[x!=5] # outputs values of x that are leq 5
 x[3]  
 x[5]
 x[5] - x[99]
+
+### D100 STOP # 18-JAN 
+
 
 # let's create a matrix
 M = matrix(1:12, 3, 4) # the colon implies sequences

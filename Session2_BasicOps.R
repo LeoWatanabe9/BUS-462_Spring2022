@@ -112,13 +112,13 @@ length(x) # how many elements of x?
 str(x) # structure of x
 
 # you can use : to generate a sequence of numbers
-x <- 1:10
+x<- 1:10
 print(x) #or just x
 
 # seq can be used to create sequences
 x <- seq(0, 1, 0.05)
 x  
-?seq()
+?seq
 
 # let's work with bigger vectors
 x <- seq(1, 100, 1)
@@ -136,7 +136,6 @@ x[5]
 x[5] - x[99]
 
 ### D100 STOP # 18-JAN 
-
 
 # let's create a matrix
 M = matrix(1:12, 3, 4) # the colon implies sequences
@@ -203,7 +202,7 @@ x <- x[1:15] # removing all "Treatments"
 x    
 plot(x)  # labels stay! even if no values for treatment
 
-
+## E100
 
 ### NOTE # Special cases:   
 #1:   NA, stands for "not applicable" and is used for missing data. 
@@ -231,7 +230,9 @@ sum(vec)/length(vec)
 
 # good, now let's create a function that calculates the mean of whatever we ask it to
 # let's make this function as an obhject
-fn1 <- function(x) {sum(x)/length(x)} # stored in environment!
+fn1 <- function(x){
+  sum(x)/length(x)
+  } # stored in environment!
 # the code inside the object fn1 is reusable
 
 

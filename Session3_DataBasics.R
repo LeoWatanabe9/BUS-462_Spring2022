@@ -15,6 +15,7 @@ cat("\014")  # Clear Console
 rm(list = ls(all.names = TRUE))# clear all
 gc()
 
+#install.packages("data.table")
 require(data.table)
 
 # data  link on canvas in Module 3
@@ -35,7 +36,7 @@ taxi_data <- read.csv("C:/Users/CK/Downloads/taxi_data.csv", header = TRUE)
 # header = TRUE is usually ASSUMED, so not strictly necessary
 
 #3 / Using data table alternate - fast and effecient!
-taxi_data <- fread("C:/Users/CK/Downloads/taxi_data.csv")
+dt <- fread("C:/Users/CK/Downloads/taxi_data.csv")
 
 #4/ directly from the internet
 taxi_data <- fread("https://philchodrow.github.io/cos_2017/1_terminal_and_git/taxi_data.csv")
@@ -54,6 +55,7 @@ head(taxi_data)
 
 # Use the $ command to look at specific columns
 taxi_data$vendor_id
+
 taxi_data$rate_code
 
 ####################################################
@@ -64,13 +66,16 @@ taxi_data$rate_code
 mean(taxi_data$passenger_count)
 sd(taxi_data$passenger_count)
 summary(taxi_data$passenger_count)
-
+hist(taxi_data$passenger_count)
 # Plot fare amount vs trip distance
 plot(taxi_data$trip_distance, taxi_data$fare_amount)
 
 
 # Plot with a title, x- and y-axis labels
-plot(taxi_data$trip_distance, taxi_data$fare_amount, main="Fare Amount vs. Trip Distance", xlab = "Trip Distance [mi]", ylab = "Fare Amount [$]")
+plot(taxi_data$trip_distance, taxi_data$fare_amount, 
+     main="Fare Amount vs. Trip Distance", 
+     xlab = "Trip Distance [mi]", 
+     ylab = "Fare Amount [$]")
 
 # For other plots and information about the default graphics package
 library(help = "graphics")
@@ -93,12 +98,12 @@ min(taxi_data$trip_distance)
 median(taxi_data$trip_distance)
 max(taxi_data$trip_distance)
 summary(taxi_data$trip_distance)
-hist(taxi_data$trip_distance)
+hist(log(taxi_data$trip_distance))
 
 sum(taxi_data$total_amount)
 
 hist(taxi_data$total_amount)
-boxplot(taxi_data$total_amount)
+boxplot(taxi_data$fare_amount)
 
 
 #####################################3

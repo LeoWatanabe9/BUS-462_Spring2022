@@ -231,8 +231,8 @@ sum(vec)/length(vec)
 # good, now let's create a function that calculates the mean of whatever we ask it to
 # let's make this function as an obhject
 fn1 <- function(x){
-  sum(x)/length(x)
-  } # stored in environment!
+  sum(x)/length(x)}
+   # stored in environment!
 # the code inside the object fn1 is reusable
 
 
@@ -244,7 +244,8 @@ mean.vec <- fn1(vec)
 ### this is VERY USEFUL in analytics
 
 
-###Let this be your mantra: "If I want to keep it for later, I need to put it in an object so that is doesn't go off." 
+###Let this be your mantra: "If I want to keep it for later, 
+#I need to put it in an object so that is doesn't go off." 
 
 
 ###################################0
@@ -259,7 +260,6 @@ plot(d) # plot the std normal density
 # standard plotting  -- look up plotting help!
 plot(z, d, type="l") 
 title("The Standard Normal Density", col.main="#3366cc") # add a title
-
 z2  <- rep(1,32)
 pie(z2, col = rainbow(32))
 # let's play with this
@@ -294,7 +294,6 @@ str(dt)
 
 View(dt) # let's see this data
 # we have obs for speed and stopping distance for cars in 1920s
-
 
 # let's calculate  average and std dev of speed and distance
 avg.speed <- mean(dt$speed) # notice the $ to point the general function mean to a specific column!

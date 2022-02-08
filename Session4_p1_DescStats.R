@@ -153,7 +153,7 @@ res
 
 # using dplyr. we can compute desc stats by group
 
-# install.packages("dplyr")
+#install.packages("dplyr")
 library(dplyr)
 
 # The function %>% is used to chain operation in dplyr
@@ -171,7 +171,8 @@ group_by(dt,Species) %>% summarise(count = n(),
 # We create the variable size which corresponds to small if the length of the petal is smaller than the median of all flowers, big otherwise:
 # this is very useful general trick
 
-dt$size <- ifelse(dt$Sepal.Length < median(dt$Sepal.Length),"small", "big") # ifelse function
+dt$size <- ifelse(dt$Sepal.Length < median(dt$Sepal.Length),"small", "big") 
+# ifelse function
 
 table(dt$size)
 

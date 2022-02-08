@@ -43,7 +43,7 @@ set.seed(42) # Set a seed to ensure repeatable random samples
   
   # Let's play around
   # use another mu
-  t.test(x,mu=10.2)
+  t.test(x,mu=11)
   # Look at the p - value. It is smaller than the significance level of 0.05. Therefore, you should reject null
   
   # Use conf.level argument to adjust the confidence level.
@@ -108,7 +108,7 @@ set.seed(42) # Set a seed to ensure repeatable random samples
   # Null H0: sample is nnormally distributed
   # Alt H1: sample is NOT normally distributed
   set.seed(42)
-  test <- rnorm(100, mean=5, sd=1) # generate a normal distribution
+  test <- rnorm(100) # generate a normal distribution
   shapiro.test(test)  # the shapiro test.
   # look at the p-value ===> > significance => failure to reject null
   
@@ -150,8 +150,8 @@ set.seed(42) # Set a seed to ensure repeatable random samples
   # we see p < \alpha => reject null
   
   # let's play around with 2 random normal distr.
-  x <- rnorm(100, mean=5.5, sd=1) # generate a normal distribution
-  y <- rnorm(100, mean=5.25, sd=1) # generate a normal distribution
+  x <- rnorm(100, mean=5.5, sd=0) # generate a normal distribution
+  y <- rnorm(100, mean=5.25, sd=3) # generate a normal distribution
   hist(x)
   hist(y)
   var.test(x,y)

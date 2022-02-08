@@ -17,10 +17,10 @@ require(data.table)
 #### LOAD DATA
 ## ,colClasses=c("numeric") forces fread to read the data in as numeric
 # You'll run into trouble otherwise
-aq1 <- fread("C:/Users/kalig/Dropbox/lecture slides/CK's version/DataSets/AQ_1.csv",colClasses=c("numeric"))
-aq2 <- fread("C:/Users/kalig/Dropbox/lecture slides/CK's version/DataSets/AQ_2.csv",colClasses=c("numeric"))
-aq3 <- fread("C:/Users/kalig/Dropbox/lecture slides/CK's version/DataSets/AQ_3.csv",colClasses=c("numeric"))
-aq4 <- fread("C:/Users/kalig/Dropbox/lecture slides/CK's version/DataSets/AQ_4.csv",colClasses=c("numeric"))
+aq1 <- fread("C:/Users/CK/Dropbox/lecture slides/CK's version/DataSets/AQ_1.csv",colClasses=c("numeric"))
+aq2 <- fread("C:/Users/CK/Dropbox/lecture slides/CK's version/DataSets/AQ_2.csv",colClasses=c("numeric"))
+aq3 <- fread("C:/Users/CK/Dropbox/lecture slides/CK's version/DataSets/AQ_3.csv",colClasses=c("numeric"))
+aq4 <- fread("C:/Users/CK/Dropbox/lecture slides/CK's version/DataSets/AQ_4.csv",colClasses=c("numeric"))
 
 #################################################
 ## Regressing AQ DAta - SEssion 5 ###########

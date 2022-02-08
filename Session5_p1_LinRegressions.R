@@ -33,6 +33,8 @@ require(pastecs)
 stat.desc(cars) # summary desc stats
 
 scatter.smooth(x=cars$speed, y=cars$dist, main="Dist ~ Speed")  # scatterplot
+ggplot(data=cars,aes(x=speed,y=dist)) + geom_point() + geom_smooth(formula = y~x, method=lm)
+
 # =>  suggestive of linear relationship
 
 # check for outliers
@@ -56,7 +58,6 @@ scatter.smooth(x=cars$speed, y=cars$dist, main="Dist ~ Speed")  # scatterplot
 #Correlation
   cor(cars$dist,cars$speed)
 
-  ggplot(data=cars,aes(x=speed,y=dist)) + geom_point() + geom_smooth(formula = y~x, method=lm)
   
 # linear model
 Model1 <- lm(dist~speed,data=cars) # we trying to figure out stopping distance y as function of x
@@ -89,7 +90,8 @@ BIC(Model1)
 # Regression Diagnostics https://www.andrew.cmu.edu/user/achoulde/94842/homework/regression_diagnostics.html
 
 #1. Residuals vs. Fitted
-ggplot(data=Model1,aes(x=Model1$fitted.values,y=Model1$residuals)) + geom_point() + geom_smooth(formula = y~x, method=lm)
+ggplot(data=Model1,aes(x=Model1$fitted.values,y=Model1$residuals)) +
+  geom_point() + geom_smooth(formula = y~x, method=lm)
 
 #2. Normality of Residuals
 hist(Model1$residuals, freq = FALSE,breaks = 10, col='green') + lines(density(Model1$residuals))

@@ -101,8 +101,9 @@
   # interpretation of LOGIT MODEL
   exp(cbind(OR = coef(m.LOGIT.2), confint(m.LOGIT.2)))
 
+  # LOOK AT THE EFFECT SIZE OF JOB SURVEY compared to other variables!
    
-  # Let's look at job satisfaction
+  # For e.g., Let's look at job satisfaction
   # recall  the standard interpretation of log-odds and odds.
     
   # log odds: 
